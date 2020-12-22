@@ -2,62 +2,165 @@
 <!DOCTYPE html>
 <html>
 
-<head lang="en">
-    <!-- Inside the head tag we will define all the information the browser needs in order to start interpreting the page. -->
+    <head lang="en">
+        <!-- Inside the head tag we will define all the information the browser needs in order to start interpreting the page. -->
 
-    <!--The title appears in the browser’s window-->
-    <title>Este texto es el título del documento</title>
+        <!--The title appears in the browser’s window-->
+        <title>Esta es Kenia aprendiendo programacion web</title>
 
-    <!--Meta tags describe documents. They are used to specify things like: the author, title, date, keywords, descriptions, etc. Search engines love these tags -->
-    <!--charset define la tabla de caracteres a utilizar para presentar el texto en pantalla-->
-    <meta charset="utf-8">
-    <meta name="description" content="Este es un documento HTML5">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
+        <!--Meta tags describe documents. They are used to specify things like: the author, title, date, keywords, descriptions, etc. Search engines love these tags -->
+        <!--charset define la tabla de caracteres a utilizar para presentar el texto en pantalla-->
+        <meta charset="utf-8">
+        <meta name="description" content="Este es un documento HTML5">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
 
-    <!--se usa para incorporar al documento estilos, códigos, imágenes o iconos desde archivos externos-->
-    <!--icono en la parte superior de la ventana junto con el título de la página-->
-    <link rel="icon" href="imagenes/favicon.png" type="image/png" sizes="16x16">
-    <!--cargar oja de estilo-->
-    <link rel="stylesheet" href="misestilos.css">
+        <!--se usa para incorporar al documento estilos, códigos, imágenes o iconos desde archivos externos-->
+        <!--icono en la parte superior de la ventana junto con el título de la página-->
+        <link rel="icon" href="imagenes/favicon.png" type="image/png" sizes="16x16">
+        <!--cargar oja de estilo-->
+        <link rel="stylesheet" href="misestilos.css">
 
-</head>
+    </head>
 
-<body>
-    <!--Inside the body we will define the content of the page.-->
+    <body>
+        <!--Inside the body we will define the content of the page.-->
 
-    <!--<header> element represents a container for introductory content or a set of navigational links.-->
-    <header>
-        Este es el titulo
-    </header>
-    <!--<nav> tag defines a set of navigation links.-->
-    <nav>
-        Principal | Fotos | Videos | Contacto
-    </nav>
-    <!--<main> tag specifies the main content of a document-->
-    <main>
-        <!--<section> tag defines a section in a document.-->
-        <section>
-            <!--<article> tag specifies independent, self-contained content.-->
-            <article>
-                Este es el texto de mi primer artículo
-            </article>
-            <article>
-                Este es el texto de mi segundo artículo
-            </article>
-        </section>
-        <!--<aside> tag defines some content aside from the content it is placed in. The aside content should be indirectly related to the surrounding content-->
-        <aside>
-            Cita del artículo uno
-            Cita del artículo dos
-        </aside>
+        <!--<header> element represents a container for introductory content or a set of navigational links.-->
+        <header>
+            <!--<h1> to <h6> tags are used to define HTML headings.-->
+            <h1 id="titulo"> Este es el titulo</h1>
+        </header>
+        <!--<nav> tag defines a set of navigation links.-->
+        <nav>
+            <nav>
+                <!--<a> tag defines a hyperlink, which is used to link from one page to another.-->
+                <a href="index.html">Principal</a> |
+                <a href="fotos.html">Fotos</a> |
+                <a href="videos.html">Videos</a> |
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </nav>
+        <!--<main> tag specifies the main content of a document-->
+        <main>
+            <!--<section> tag defines a section in a document.-->
+            <section>
+                <!--<article> tag specifies independent, self-contained content.-->
+                <article>
+                    Este es el texto de mi primer artículo
+                </article>
+                <article>
+                    Este es el texto de mi segundo artículo
+                </article>
+                <article>
+                    <!--<pre> tag defines preformatted text.-->
+                    <pre>
+                        La muerte es una quimera: porque mientras yo existo, no existe la
+                        muerte;
+                        y cuando existe la muerte, ya no existo yo.
+                        Epicuro de Samos
+                    </pre>
+                </article>
+                <article>
+                    <!--<em>—Este elemento se usa para indicar énfasis. El texto se muestra por defecto con letra cursiva.
+                        <strong>—Este elemento es utiliza para indicar importancia. El texto se muestra por defecto en negrita.
+                        <i>—Este elemento representa una voz alternativa o un estado de humor, como un pensamiento, un término técnico, etc. El texto se muestra por defecto con letra cursiva.
+                        <u>—Este elemento representa texto no articulado. Por defecto se muestra subrayado.
+                        <b>—Este elemento se usa para indicar importancia. Debería ser implementado solo cuando ningún otro elemento es apropiado para la situación. El texto se muestra por defecto en negrita.-->
 
-        <!--<div> tag defines a division or a section in an HTML document. Se usa cuando no se puede aplicar ningún otro elemento.-->
-         <!--<footer> tag defines a footer for a document or section.-->
+                    <p>La muerte es una <em>quimera</em>: porque mientras yo existo, no
+                        existe la <i>muerte</i>;<br>y cuando existe la <i>muerte</i>,
+                        <strong>ya no existo yo</strong>.<br>Epicuro de Samos</p>
+                </article>
+                <article>
+                    <!--<mark>—Este elemento resalta texto que es relevante en las circunstancias actuales (por ejemplo, términos que busca el usuario).
+                    <small>—Este elemento representa letra pequeña, como declaraciones legales, descargos, etc.
+                    <cite>—Este elemento representa el autor o título de una obra, como un libro, una película, etc.
+                    <address>—Este elemento representa información de contacto. Se implementa con frecuencia dentro de los pies de página para definir la dirección de la empresa o el sitio web
+                    <time>—Este elemento representa una fecha en formato legible para el usuario. Incluye el atributo datetime para especificar un valor en formato de ordenador y el atributo pubdate, el cual indica que el valor asignado al atributo datetime representa la fecha de publicación.
+                    <code>—Este elemento representa código de programación. Se usa en conjunto con el elemento <pre> para presentar código de programación en el formato original.
+                    <data>—Este elemento representa datos genéricos. Puede incluir el atributo value para especificar el valor en formato de ordenador (por ejemplo, <data value="32">Treinta y Dos</data>).-->
+                    <header>
+                        <h1>Título del artículo</h1>
+                        <time datetime="2016-10-12" pubdate>publicado 12-10-2016</time>
+                    </header>
+                    <p>La muerte es una quimera: porque mientras yo <mark>existo</mark>,
+                        no existe la muerte;<br>y cuando existe la muerte, ya no existo
+                        yo.<br><cite>Epicuro de Samos</cite>
+                    </p>
+                    <footer>
+                        <address>Toronto, Canada</address>
+                        <small>&copy; Derechos Reservados 2016</small>
+                    </footer>
+                </article>
+                <article>
+                    <!--<code> tag is used to define a piece of computer code, it is good to use with <pre>-->
+                    <pre>
+                        <code>
+                            function cambiarColor() {
+                            document.body.style.backgroundColor = "#0000FF";
+                            }
+                            document.addEventListener("click", cambiarColor);
+                        </code>
+                    </pre>
+                </article>
+            </section>
+            <section id="libros">
+                <div class="libros">Libro: IT, Stephen King</div>
+                <div class="libros">Libro: Carrie, Stephen King</div>
+                <div class="libros">Libro: El resplandor, Stephen King</div>
+                <div class="libros">Libro: Misery, Stephen King</div>
+            </section>
+            <!--<aside> tag defines some content aside from the content it is placed in. The aside content should be indirectly related to the surrounding content-->
+            <aside>
+                <!--<p> tag defines a paragraph.-->
+                <p>Cita del artículo uno</p>
+                <p>Cita del artículo dos</p>
+                <pre>
+                    *
+                    *
+                    *
+                    *
+                    *
+                    *
+                    *
+                    *
+                    *
+                    *
+                    *
+                    *
+                    *
+                    *
+                    *
+                    *
+                    *
+                    *
+                    *
+                    *
+                    *
+                    *
+                    *
+                    *
+                    *
+                    *
+                    *
+                    *
+                </pre>
+            </aside>
+            <!--los enlaces también se pueden crear hacia otros elementos dentro del mismo documento-->
+            <p><a href="#titulo">Volver</a></p>
+        </main>
+
+            <!--<div> tag defines a division or a section in an HTML document. Se usa cuando no se puede aplicar ningún otro elemento.-->
+            <!--<footer> tag defines a footer for a document or section.-->
         <footer>
-            &copy; Derechos Reservados 2016
+            <address>Toronto, Canada</address>
+            <small>&copy; 2016 <a href="http://www.jdgauchat.com">J.D Gauchat </a>
+                <!--mailto y tel para especificar una cuenta de correo o un número de teléfono-->
+                 <a href="mailto:info@jdgauchat.com"> info@jdgauchat.com </a>
+            </small>
+            <!--Cuando el atributo download se encuentra presente dentro de un elemento <a>, el archivo especificado por el atributo href se descarga y almacena en el disco duro del usuario. Por otro lado, el archivo que indica el atributo ping no se descarga, sino que se ejecuta en el servidor-->
+            <a href="http://www.formasterminds.com/content/miarchivo.pdf" ping="http://www.formasterminds.com/control.php" download>Clic aquí para descargar</a>
         </footer>
-
-
-</body>
+    </body>
 
 </html>
