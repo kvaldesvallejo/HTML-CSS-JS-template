@@ -1,0 +1,325 @@
+section {
+    font-size: 20px;
+}
+
+/*afecta a todos los elementos <p> y <span> encontrados en el documento.*/
+p, span {
+font-size: 20px;
+}
+
+/*selectores de descendencia, elementos <p> que se encuentran dentro de un elemento <main>*/
+main p {
+    font-size: 20px;
+}
+
+/*El carácter > indica que el elemento afectado es el elemento de la derecha cuando tiene como padre al elemento de la izquierda, 
+modifica los elementos <p> que son hijos de un elemento <section>.*/
+section > p {
+    font-size: 20px;
+}
+
+/*+ referencia un elemento que está precedido por otro elemento. Ambos deben compartir el mismo elemento padre,
+todos los elementos <p> que se ubican inmediatamente después de un elemento <h1>*/
+h1 + p {
+    font-size: 20px;
+}
+
+/* ~ para crear un selector que afecta a todos los elementos quese ubican a continuación de otro elemento. Este selector es similar al anterior, pero el
+elemento afectado no tiene que encontrarse inmediatamente después del primer elemento,
+todos los elementos <p> que preceden a otro elemento <p>*/
+p ~ p {
+    font-size: 20px;
+}
+
+/*# para seleccionar un id*/
+#mitexto {
+    font-size: 20px;
+}
+
+/* . para seleccionar una clase*/
+.mitexto {
+    font-size: 20px;
+}
+
+/*Las clases también se pueden declarar como exclusivas para un tipo específico de elementos
+declarando el nombre del elemento antes del punto.*/
+p.mitexto {
+    font-size: 20px;
+}
+
+/*Referenciando elementos <p> que tienen un atributo name con el valor mitexto*/
+p[name="mitexto"] {
+    font-size: 20px;
+}
+
+/*Aplicando selectores de atributo
+ ~= referencia cualquier elemento <p> con un atributo name cuyo valor incluye la palabra "mi" (por ejemplo, "mi texto", "mi coche").
+^= referencia cualquier elemento <p> con el atributo name cuyo valor comienza en "mi" (por ejemplo, "mitexto", "micoche").
+$= referencia cualquier elemento <p> con un atributo name cuyo valor termina en "mi" (por ejemplo, "textomi", "cochemi").
+*= referencia cualquier elemento <p> con un atributo name cuyo valor contiene la cadena de caracteres "mi" (en este caso, la cadena de caracteres podría también encontrarse en el medio del texto, como en "textomicoche").*/
+p[name~="mi"] {
+    font-size: 20px;
+}
+p[name^="mi"] {
+    font-size: 20px;
+}
+p[name$="mi"] {
+    font-size: 20px;
+}
+p[name*="mi"] {
+    font-size: 20px;
+}
+
+/*Seudoclases
+:nth-child(valor)—Esta seudoclase selecciona un elemento de una lista de elementos hermanos que se encuentra en la posición especificada por el valor entre paréntesis.
+:first-child—Esta seudoclase selecciona el primer elemento de una lista de elementos hermanos.
+:last-child—Esta seudoclase selecciona el último elemento de una lista de elementos hermanos.
+:only-child—Esta seudoclase selecciona un elemento cuando es el único hijo de otro elemento.
+:first-of-type—Esta seudoclase selecciona el primer elemento de una lista de elementos del mismo tipo.
+:not(selector)—Esta seudoclase selecciona los elementos que no coinciden con el selector entre paréntesis.
+
+p:nth-child(2) {
+font-size: 20px;
+}
+
+section :not(.mitexto2) {
+margin: 0px;
+}
+*/
+
+/*Las propiedades de formato se encargan de dar forma a los elementos y su contenido
+    Texto
+        font-family—tipo de letra. Se pueden declarar múltiples valores separados por coma para ofrecer al navegador varias
+            alternativas. valores estándar son Georgia, "Times New Roman", Arial, Helvetica, "Arial Black", Gadget, Tahoma, Geneva, Helvetica,
+            Verdana, Geneva, Impact, y sans-serif (los nombres compuestos por más de una palabra se deben declarar entre comillas dobles).
+        font-size— tamaño de la letra en píxeles (px), porcentaje (%), em, rem, pt, valor por defecto es 16px.
+        font-weight— negrita, valores disponibles son normal y bold, pero también podemos asignar los valores 100, 200, 300, 400, 500, 600, 700, 800, y 900 
+        font-style— estilo de letra. Los valores disponibles son normal, italic, y oblique.
+        font—Esta propiedad nos permite declarar múltiples valores al mismo tiempo. Los valores deben declararse separados por un espacio y en un orden preciso. El estilo y el grosor se
+            deben declarar antes que el tamaño, y el tipo de letra al final (por ejemplo, font: bold 24px Arial,sans-serif).
+
+        text-align—Esta propiedad alinea el texto dentro de un elemento. Los valores disponibles son left, right, center, y justify.
+        text-align-last— alinea la última línea de un párrafo. Los valores disponibles son left, right, center, y justify.
+        text-indent— el tamaño de la sangría de un párrafo (el espaci vacío al comienzo de la línea). El valor se puede declarar en píxeles (px), porcentaje (%), o
+            usando cualquiera de las unidades disponibles en CSS, como em, rem, pt, etc.
+        letter-spacing—Esta propiedad define el espacio entre letras. El valor se debe declarar en píxeles (px), porcentaje (%) o usando cualquiera de las unidades disponibles en CSS,
+            como em, rem, pt, etc.
+        word-spacing—Esta propiedad define el ancho del espacio entre palabras. El valor puede ser declarado en píxeles (px), porcentaje (%) o usando cualquiera de las unidades
+            disponibles en CSS, como em, rem, pt, etc
+        line-height—Esta propiedad define el espacio entre líneas. El valor se puede declarar en píxeles (px), porcentaje (%) o usando cualquiera de las unidades disponibles en CSS, como
+            em, rem, pt, etc.
+        vertical-align—Esta propiedad alinea elementos verticalmente. Se usa frecuentemente     para alinear texto con imágenes (la propiedad se aplica a la imagen). Los valores disponibles
+            son baseline, sub, super, text-top, text-bottom, middle, top, y bottom
+
+        text-decoration—Esta propiedad resalta el texto con una línea. Los valores disponibles son underline, overline, line-through, y none.
+
+        @font-face es una regla reservada que permite a los diseñadores incluir un archivo con la fuente de letra a usar para mostrar el texto de una página web.
+@font-face {
+    font-family: "MiNuevaLetra";
+src: url("font.ttf");
+}
+
+    Colores
+        rgb(rojo, verde, azul)— (desde 0 a 255) (por ejemplo, rgb(153, 102, 51)).
+        rgba(rojo, verde, azul, alfa)—un componente adicional para definir la opacidad (alfa). El valor se puede declarar entre 0 y 1, con 0 como totalmente transparente y 1 como totalmente opaco.
+        hsl(matiz, saturación, luminosidad)—Esta función define un color desde los valores especificados por los atributos. Los valores se declaran en números decimales y porcentajes.
+        hsla(matiz, saturación, luminosidad, alfa)—incluye un componente adicional para definir la opacidad (alfa). El valor se puede declarar entre 0 y 1, con 0 como totalmente transparente y 1 como totalmente opaco.
+        color—Esta propiedad declara el color del contenido del elemento 
+            color: #CCCCCC;
+            color: rgb(204, 204, 204);
+            color: hsl(0, 0%, 80%);
+
+    Tamaño
+        width—Esta propiedad declara el ancho de un elemento. El valor se puede especificar en
+            píxeles, porcentaje, o con la palabra clave auto (por defecto). Cuando el valor se especifica
+            en porcentaje, el ancho se calcula según el navegador a partir del ancho del contenedor, y
+            cuando se declara con el valor auto, el elemento se expande hasta ocupar todo el espacio
+            horizontal disponible dentro del contenedor.
+            solo trabajan con elementos Block
+        height—Esta propiedad declara la altura de un elemento. El valor se puede especificar en
+            píxeles, porcentaje, o con la palabra clave auto (por defecto). Cuando el valor se especifica
+            en porcentaje, el navegador calcula la altura a partir de la altura del contenedor, y cuando
+            se declara con el valor auto, el elemento adopta la altura de su contenedor
+            solo trabajan con elementos Block
+        overflow—Esta propiedad especifica cómo se mostrará el contenido que desborda el
+            elemento. Los valores disponibles son visible (por defecto), hidden (esconde el
+            contenido que no entra dentro de la caja), scroll (muestra barras laterales para
+            desplazar el contenido), auto (deja que el navegador decida qué hacer con el contenido).
+        overflow-x—Esta propiedad especifica cómo se mostrará el contenido que desborda el
+            mento horizontalmente. Acepta los mismos valores que la propiedad overflow.
+        overflow-y—Esta propiedad especifica cómo se mostrará el contenido que desborda el
+            elemento verticalmente. Acepta los mismos valores que la propiedad overflow.
+        overflow-wrap—Esta propiedad indica si un palabra debería ser dividida en un punto
+            arbitrario cuando no hay suficiente espacio para mostrarla en la línea. Los valores
+            disponibles son normal (la línea será dividida naturalmente) y break-word (las palabras
+            se dividirán en puntos arbitrarios para acomodar la línea de texto en el espacio disponible).
+        overflow: scroll
+        margin—Esta propiedad declara el margen de un elemento. El margen es el espacio que
+            hay alrededor de la caja. Puede recibir cuatro valores que representan el margen superior,
+            derecho, inferior, e izquierdo, en ese orden y separados por un espacio (por ejemplo,
+            margin: 10px 30px 10px 30px;). Sin embargo, si solo se declaran uno, dos o tres
+            valores, los otros toman los mismos valores (por ejemplo, margin: 10px 30px asigna 10
+            píxeles al margen superior e inferior y 30 píxeles al margen izquierdo y derecho). Los
+            valores se pueden declarar independientemente usando las propiedades asociadas
+            margin-top, margin-right, margin-bottom y margin-left (por ejemplo, marginleft:
+            10px;). La propiedad también acepta el valor auto para obligar al navegador a
+            calcular el margen (usado para centrar un elemento dentro de su contenedor).
+        padding—Esta propiedad declara el relleno de un elemento. El relleno es el espacio entre
+            el contenido del elemento y los límites de su caja. Los valores se declaran de la misma
+            forma que lo hacemos para la propiedad margin, aunque también se pueden declarar de
+            forma independiente con las propiedades padding-top, padding-right, paddingbottom
+            y padding-left (por ejemplo, padding-top: 10px;).
+
+    Fondo
+        background-color—Esta propiedad asigna un fondo de color a un elemento.
+        background-image—Esta propiedad asigna una o varias imágenes al fondo de un
+            elemento. La URL del archivo se declara con la función url() (por ejemplo,
+            url("ladrillos.jpg")). Si se requiere más de una imagen, los valores se deben
+            separar por una coma.
+        background-position—Esta propiedad declara la posición de comienzo de una imagen
+            de fondo. Los valores se pueden especificar en porcentaje, píxeles o usando una
+            combinación de las palabras clave center, left, right, top, y bottom.
+        background-size—Esta propiedad declara el tamaño de la imagen de fondo. Los valores
+            se pueden especificar en porcentaje, píxeles, o usando las palabras clave cover y contain.
+            La palabra clave cover expande la imagen hasta que su ancho o su altura cubren el área del
+            elemento, mientras que contain estira la imagen para ocupar toda el área del elemento.
+        background-repeat—Esta propiedad determina cómo se distribuye la imagen de fondo
+            usando cuatro palabras clave: repeat, repeat-x, repeat-y y no-repeat. La palabra
+            clave repeat repite la imagen en el eje vertical y horizontal, mientras que repeat-x y
+            repeat-y lo hacen solo en el eje horizontal o vertical, respectivamente. Finalmente, norepeat
+            muestra la imagen de fondo una sola vez.
+        background-origin—Esta propiedad determina si la imagen de fondo se posicionará
+            considerando el borde, el relleno o el contenido del área del elemento. Los valores
+            disponibles son border-box, padding-box, y content-box.
+        background-clip—Esta propiedad declara el área a cubrir por el fondo usando los
+            valores border-box, padding-box, y content-box. El primer valor corta la imagen al
+            borde de la caja del elemento, el segundo corta la imagen en el relleno de la caja y el
+            tercero corta la imagen alrededor del contenido de la caja.
+        background-attachment—Esta propiedad determina si la imagen es estática o se
+            desplaza con el resto de los elementos usando dos valores: scroll (por defecto) y fixed.
+            El valor scroll hace que la imagen se desplace con la página, y el valor fixed fija la
+            imagen de fondo en su lugar original.
+        background—Esta propiedad nos permite declarar todos los atributos del fondo al mismo tiempo.   
+            
+    Bordes
+        border-width—Esta propiedad define el ancho del borde. Acepta hasta cuatro valores
+            separados por un espacio para especificar el ancho de cada lado del borde (superior,
+            derecho, inferior, e izquierdo, es ese orden). También podemos declarar el ancho para
+            cada lado de forma independiente con las propiedades border-top-width, borderbottom-
+            width, border-left-width, y border-right-width.
+        border-style—Esta propiedad define el estilo del borde. Acepta hasta cuatro valores
+            separados por un espacio para especificar los estilos de cada lado del borde (superior,
+            derecho, inferior, e izquierdo, en ese orden). Los valores disponibles son none, hidden,
+            dotted, dashed, solid, double, groove, ridge, inset, y outset. El valor por defecto
+            es none, lo que significa que el borde no se mostrará a menos que asignemos un valor
+            diferente a esta propiedad. También podemos declarar los estilos de forma independiente
+            con las propiedades border-top-style, border-bottom-style, border-leftstyle,
+            y border-right-style.
+        border-color—Esta propiedad define el color del borde. Acepta hasta cuatro valores
+            separados por un espacio para especificar el color de cada lado del borde (superior,
+            derecho, inferior, e izquierdo, en ese orden). También podemos declarar los colores de
+            forma independiente con las propiedades border-top-color, border-bottom-color,
+            border-left-color, y border-right-color.
+        border—Esta propiedad nos permite declarar todos los atributos del borde al mismo
+            tiempo. También podemos usar las propiedades border-top, border-bottom, borderleft,
+            y border-right para definir los valores de cada borde de forma independiente
+        border-radius—Esta propiedad define el radio del círculo virtual que el navegador
+            utilizará para dibujar las esquinas redondeadas. Acepta hasta cuatro valores para definir
+            los radios de cada esquina (superior izquierdo, superior derecho, inferior derecho e inferior
+            izquierdo, en ese orden). También podemos usar las propiedades border-top-leftradius,
+            border-top-right-radius, border-bottom-right-radius, y borderbottom-
+            left-radius para definir el radio de cada esquina de forma independiente.
+            outline-width—Esta propiedad define el ancho del borde. Acepta valores en cualquiera
+                de las unidades disponibles en CSS (px, %, em, etc.) y también las palabras clave thin,
+                medium, y thick.
+            outline-style—Esta propiedad define el estilo del borde. Los valores disponibles son
+                none, auto, dotted, dashed, solid, double, groove, ridge, inset, y outset.
+            outline-color—Esta propiedad define el color del borde.
+            outline-offset—Esta propiedad define el desplazamiento (a qué distancia de los límites
+                de la caja se dibujará el segundo borde). Acepta valores en cualquiera de las unidades
+                disponibles en CSS (px, %, em, etc.).
+            outline—Esta propiedad nos permite especificar el ancho, estilo y color del borde al mismo
+                tiempo (el desplazamiento aún se debe definir con la propiedad outline-offset).
+
+        Sombras
+            box-shadow—Esta propiedad genera una sombra desde la caja del elemento. Acepta
+                hasta seis valores. Podemos declarar el desplazamiento horizontal y vertical de la sombra,
+                el radio de difuminado, el valor de propagación, el color de la sombra, y también podemos
+                incluir el valor inset para indicar que la sombra deberá proyectarse dentro de la caja.
+            text-shadow—Esta propiedad genera una sombra desde un texto. Acepta hasta cuatro
+                valores. Podemos declarar el desplazamiento horizontal y vertical, el radio de difuminado y
+                el color de la sombra.
+
+        Gradientes
+            linear-gradient(posición, ángulo, colores)—Esta función crea un gradiente lineal. El
+                atributo posición determina el lado o la esquina desde la cual comienza el gradiente y se
+                declara con los valores top, bottom, left y right; el atributo ángulo define la dirección
+                del gradiente y se puede declarar en las unidades deg (grados), grad (gradianes), rad
+                (radianes), o turn (espiras), y el atributo colores es la lista de colores que participan en el
+                gradiente separados por coma. Los valores para el atributo colores pueden incluir un
+                segundo valor en porcentaje separado por un espacio para indicar la posición donde
+                finaliza el color.
+            radial-gradient(posición, forma, colores, extensión)—Esta función crea un
+                gradiente radial. El atributo posición indica el origen del gradiente y se puede declarar en
+                píxeles, en porcentaje, o por medio de la combinación de los valores center, top,
+                bottom, left y right, el atributo forma determina la forma del gradiente y se declara
+                con los valores circle y ellipse, el atributo colores es la lista de los colores que
+                participan en el gradiente separados por coma, y el atributo extensión determina la forma
+                que el gradiente va a adquirir con los valores closest-side, closest-corner,
+                farthest-side, y farthest-corner. Los valores para el atributo colores pueden
+                incluir un segundo valor en porcentaje separado por un espacio para indicar la posición
+                donde finaliza el color.
+
+        Filtros filter
+            blur(valor)—Esta función produce un efecto de difuminado. Acepta valores en píxeles
+                 1px a 10px.
+            grayscale(value)—Esta función convierte los colores de la imagen en una escala de
+                ses. Acepta números decimales entre 0.1 y 1.
+            drop-shadow(x, y, tamaño, color)—Esta función genera una sombra. Los atributos x
+                e y determinan la distancia entre la sombra y la imagen, el atributo tamaño especifica el
+                tamaño de la sombra, y el atributo color declara su color.
+            sepia(valor)—Esta función le otorga un tono sepia (ocre) a los colores de la imagen.
+                Acepta números decimales entre 0.1 y 1.
+            brightness(valor)—Esta función cambia el brillo de la imagen. Acepta números
+                decimales entre 0.1 y 10.
+            contrast(valor)—Esta función cambia el contraste de la imagen. Acepta números
+                decimales entre 0.1 y 10.
+            hue-rotate(valor)—Esta función aplica una rotación a los matices de la imagen. Acepta
+                un valor en grados desde 1deg a 360deg.
+            invert(valor)—Esta función invierte los colores de la imagen y produce un negativo.
+                Acepta números decimales entre 0.1 y 1.
+            saturate(valor)—Esta función satura los colores de la imagen. Acepta números
+                decimales entre 0.1 y 10.
+            opacity(valor)—Esta función cambia la opacidad de la imagen. Acepta números
+                decimales entre 0 y 1 (0 es totalmente transparente y 1 totalmente opaco)
+            filter: blur(5px);
+    */
+/*las propiedades de diseño están enfocadas a determinar el tamaño y la posición de los elementos en la pantalla*/
+
+/*
+    Cajas
+    Block tienen un tamaño personalizado y generan saltos de línea, apropiados para crear columnas y secciones, ejemplo <section>, <nav>, <header>, <footer>, o <div>,
+    Inline tienen un tamaño determinado por su contenido y no generan saltos de línea, adecuados para representar contenido, <span>, <strong>, o <em>
+
+    display—Esta propiedad define el tipo de caja usado para presentar el elemento en
+        pantalla. Existen varios valores disponibles para esta propiedad. Los más utilizados son
+        none (elimina el elemento), 
+        block (muestra el elemento en una nueva línea y con un tamaño personalizado), 
+        inline (muestra el elemento en la misma línea), 
+        inlineblock(muestra el elemento en la misma línea y con un tamaño personalizado).
+        none oculta el elemento
+    float—Esta propiedad permite a un elemento flotar hacia un lado u otro, y ocupar el
+        espacio disponible, incluso cuando tiene que compartir la línea con otro elemento. Los
+        valores disponibles son 
+        none (el elemento no flota), 
+        left (el elemento flota hacia la izquierda) y 
+        right (el elemento flota hacia la derecha).
+    clear—Esta propiedad restaura el flujo normal del documento, y no permite que el
+        elemento siga flotando hacia la izquierda, la derecha o ambos lados. Los valores
+        disponibles son none, left, right, y both (ambos).
+    overflow no deja que el contenido desborde a su contenedor extendiendo
+        el tamaño del contenedor o incluyendo barras de desplazamiento para permitir al usuario ver
+        todo el contenido si el tamaño del contenedor no se puede cambia
+
+*/
+
