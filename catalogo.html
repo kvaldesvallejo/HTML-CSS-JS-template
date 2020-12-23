@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <!-- Inside the head tag we will define all the information the browser needs in order to start interpreting the page. -->
+
+    <!--The title appears in the browser’s window-->
+    <title>Esta es Kenia aprendiendo programacion web</title>
+
+    <!--Meta tags describe documents. They are used to specify things like: the author, title, date, keywords, descriptions, etc. Search engines love these tags -->
+    <!--charset define la tabla de caracteres a utilizar para presentar el texto en pantalla-->
+    <meta charset="utf-8">
+    <meta name="description" content="Este es un documento HTML5">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+</head>
+
+<body>
+    <header>
+        <!--<h1> to <h6> tags are used to define HTML headings.-->
+        <h1>Catalogo</h1>
+    </header>
+    <!--<nav> tag defines a set of navigation links.-->
+    <nav>
+        <nav>
+            <!--<a> tag defines a hyperlink, which is used to link from one page to another.-->
+            <a href="index.html">Principal</a> |
+            <a href="fotos.html">Fotos</a> |
+            <a href="videos.html">Videos</a> |
+            <a href="contacto.html">Contacto</a>
+            <a href="catalogo.html">Catalogo</a>
+        </nav>
+    </nav>
+
+    <!--<ul>—Este elemento crea una lista de ítems sin orden. Está compuesto por etiquetas de apertura y cierre para agrupar los ítems (<ul> y </ul>) y trabaja junto con el elemento
+        <li> para definir cada uno de los ítems de la lista.
+        <ol>—Este elemento crea una lista ordenada de ítems. Está compuesto por etiquetas de apertura y cierre para agrupar los ítems (<ol> y </ol>) y trabaja junto con el elemento
+        <li> para definir los ítems de la lista. Este elemento puede incluir los atributos reversed para invertir el orden de los indicadores, start para determinar el valor desde el cual los
+            indicadores tienen que comenzar a contar y type para determinar el tipo de indicador que queremos usar. Los valores disponibles para el atributo type son 1 (números), a (letras
+            minúsculas), A (letras mayúsculas), i (números romanos en minúsculas) e I (números romanos en mayúsculas).
+        <dl>—Este elemento crea una lista de términos y descripciones. El elemento trabaja junto con los elementos <dt> y <dd> para definir los ítems de la lista. El elemento <dl> define
+            la lista, el elemento <dt> define los términos y el elemento <dd> define las descripciones.-->
+
+    <section>
+        <h4>Lista sin orden</h4>
+        <ul>
+            <li>IT, Stephen King</li>
+            <li>Carrie, Stephen King</li>
+            <li>El Resplandor, Stephen King</li>
+            <li>Misery, Stephen King</li>
+        </ul>
+    </section>
+
+    <section>
+        <h4>Lista ordenada</h4>
+        <ol type="A">
+            <li>IT, Stephen King</li>
+            <li>Carrie, Stephen King</li>
+            <li>El Resplandor, Stephen King</li>
+            <li>Misery, Stephen King</li>
+        </ol>
+    </section>
+
+    <section>
+        <h4>Lista orden invertido</h4>
+        <ol type="A" reversed>
+            <li>IT, Stephen King</li>
+            <li>Carrie, Stephen King</li>
+            <li>El Resplandor, Stephen King</li>
+            <li>Misery, Stephen King</li>
+        </ol>
+    </section>
+
+    <section>
+        <h4>Lista de terminos y descripciones</h4>
+        <dl>
+            <dt>IT</dt>
+            <dd>Tras lustros de tranquilidad y lejania una antigua promesa
+                infantil les hace volver al lugar en el que vivieron su infancia y
+                juventud como una terrible pesadilla.</dd>
+            <dt>Carrie</dt>
+            <dd>Sus compañeros se burlan de ella, pero Carrie tiene un don.
+                Puede mover cosas con su mente. Este es su poder y su gran
+                problema.</dd>
+            <dt>El Resplandor</dt>
+            <dd>Al escritor Jack Torrance le es ofrecido un empleo como cuidador
+                del hotel Overlook durante el invierno junto a su familia.</dd>
+            <dt>Misery</dt>
+            <dd>Paul Sheldon es un famoso escritor de novelas románticas
+                ambientadas en la época victoriana, cuyo personaje principal se llama
+                Misery Chastain.</dd>
+        </dl>
+    </section>
+
+    <!--<table>—Este elemento define una tabla. Incluye etiquetas de apertura y cierre para agrupar el resto de los elementos que definen la tabla.
+    <tr>—Este elemento define una fila de celdas. Incluye etiquetas de apertura y cierre para agrupar las celdas.
+    <td>—Este elemento define una celda. Incluye etiquetas de apertura y cierre para delimitar el contenido de la celda y puede incluir los atributos colspan y rowspan para
+        indicar cuántas columnas y filas ocupa la celda.
+    <th>—Este elemento define una celda para la cabecera de la tabla. Incluye etiquetas de apertura y cierre para delimitar el contenido de la celda y puede incluir los atributos
+        colspan y rowspan para indicar cuántas columnas y filas ocupa la celda.-->
+
+    <article>
+        <h3>Tabla con cabecera y estilo por defecto</h3>
+        <table>
+            <tr>
+                <th>Título</th>
+                <th>Autor</th>
+                <th>Año</th>
+            </tr>
+            <tr>
+                <td>IT</td>
+                <td>Stephen King</td>
+                <td>1986</td>
+            </tr>
+            <tr>
+                <td>Carrie</td>
+                <td>Stephen King</td>
+                <td>1974</td>
+            </tr>
+            <tr>
+                <td>El Resplandor</td>
+                <td>Stephen King</td>
+                <td>1977</td>
+            </tr>
+        </table>
+    </article>
+
+    <article>
+        <table>
+            <tr>
+                <th colspan="2">Libro</th>
+                <th>Año</th>
+            </tr>
+            <tr>
+                <td>IT</td>
+                <td>Stephen King</td>
+                <td>1986</td>
+            </tr>
+            <tr>
+                <td>Carrie</td>
+                <td>Stephen King</td>
+                <td>1974</td>
+            </tr>
+            <tr>
+                <td>El Resplandor</td>
+                <td>Stephen King</td>
+                <td>1977</td>
+            </tr>
+        </table>
+    </article>
+
+    <footer>
+        <address>Toronto, Canada</address>
+        <small>&copy; 2016 <a href="http://www.jdgauchat.com">J.D Gauchat</a></small>
+    </footer>
+</body>
+
+</html>
