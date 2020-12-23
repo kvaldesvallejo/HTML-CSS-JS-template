@@ -13,6 +13,7 @@
         <meta name="description" content="Este es un documento HTML5">
         <meta name="keywords" content="HTML, CSS, JavaScript">
     </head>
+
     <body>
         <header>
             <!--<h1> to <h6> tags are used to define HTML headings.-->
@@ -27,13 +28,178 @@
                 <a href="videos.html">Videos</a> |
                 <a href="contacto.html">Contacto</a>
                 <a href="catalogo.html">Catalogo</a>
+                <p><input type="search" name="buscar" form="formulario"></p>
             </nav>
         </nav>
-        
-        
-        <footer>
-            <address>Toronto, Canada</address>
-            <small>&copy; 2016 <a href="http://www.jdgauchat.com">J.D Gauchat</a></small>
-        </footer> 
+
+        <!--<form> tag is used to create an HTML form for user input. 
+                    Attributes
+                    accept-charset	character_set	Specifies the character encodings that are to be used for the form submission 
+                    action	URL	Specifies where to send the form-data when a form is submitted
+                    autocomplete	on/off	Specifies whether a form should have autocomplete on or off
+                    enctype	application/x-www-form-urlencoded multipart/form-data text/plain	Specifies how the form-data should be encoded when submitting it to the server (only for method="post")
+                    method	get/post	Specifies the HTTP method to use when sending form-data
+                    name	text	Specifies the name of a form
+                    novalidate	novalidate	Specifies that the form should not be validated when submitted
+                    rel	external/help/license/next/nofollow/noopener/noreferrer/opener/prev/search	Specifies the relationship between a linked resource and the current document
+                    target	_blank/_self/_parent/_top	Specifies where to display the response that is received after submitting the form
+                    
+                    The <form> element can contain one or more of the following form elements:
+                    <input>—Este elemento crea un campo de entrada. Puede recibir diferentes tipos de entradas, dependiendo del valor del atributo type.
+                        text—Este valor genera un campo de entrada para insertar texto genérico
+                            maxlength—Este atributo especifica el máximo número de caracteres que se permite introducir en el campo.
+                            minlength—Este atributo especifica el mínimo número de caracteres que se permite introducir en el campo.
+                        email—Este valor genera un campo de entrada para insertar cuentas de correo.
+                        search—Este valor genera un campo de entrada para insertar términos de búsqueda.
+                        url—Este valor genera un campo de entrada para insertar URL.
+                        tel—Este valor genera un campo de entrada para insertar números de teléfono.
+                        number—Este valor genera un campo de entrada para insertar números.
+                            min—El valor de este atributo determina el valor mínimo que acepta el campo.
+                            max—El valor de este atributo determina el valor máximo que acepta el campo.
+                            step—El valor de este atributo determina el número por el cual el valor del campo se puede incrementar o reducir
+                        range—Este valor genera un campo de entrada para insertar un rango de números.
+                            min—El valor de este atributo determina el valor mínimo que acepta el campo.
+                            max—El valor de este atributo determina el valor máximo que acepta el campo.
+                            value-Valor por defecto que toma el campo
+                        date—Este valor genera un campo de entrada para insertar una fecha.
+                            value-para declarar un valos por defecto si se desea value="2017-02-05"
+                        datetime-local—Este valor genera un campo de entrada para insertar fecha y hora.
+                        week—Este valor genera un campo de entrada para insertar el número de la semana (dentro del año).
+                        month—Este valor genera un campo de entrada para insertar el número del mes.
+                        time—Este valor genera un campo de entrada para insertar una hora (horas y minutos).
+                        hidden—Este valor oculta el campo de entrada. Se usa para enviar información complementaria al servidor.    
+                        password—Este valor genera un campo de entrada para insertar una clave. Reemplazalos caracteres insertados con estrellas o puntos para ocultar información sensible.
+                        color—Este valor genera un campo de entrada para insertar un color.
+                            value
+                        checkbox—Este valor genera una casilla de control que permite al usuario activar o desactivar una opción.
+                            checked para seleccionar opciones por defecto   
+                        radio—Este valor genera un botón de opción para seleccionar una opción de variasposibles.
+                        file—Este valor genera un campo de entrada para seleccionar un archivo en el ordenador del usuario.
+                        button—Este valor genera un botón. El botón trabaja como el elemento <button> de tipo button. No realiza ninguna acción por defecto; la acción debe ser definida desde JavaScript
+                        submit—Este valor genera un botón para enviar el formulario.
+                        reset—Este valor genera un botón para reiniciar el formulario.
+                        image—Este valor carga una imagen que se usa como botón para enviar el formulario 
+                            src para especificar la URL de la imagen.
+                            width 
+                            height
+                    <textarea>—Este elemento crea un campo de entrada para insertar múltiples líneas de texto. 
+                        cols="50" rows="6"
+                        o en píxeles con estilos CSS
+                    <select>—Este elemento crea una lista de opciones que el usuario puede elegir. Trabaja junto con el elemento <option> para definir cada opción y el elemento <optgroup> para
+                        organizar las opciones en grupos.
+                        option value
+                    <button>—Este elemento crea un botón. Incluye el atributo type para definir el propósito del botón. Los valores disponibles son submit para enviar el formulario (por
+                        defecto), reset para reiniciar el formulario, y button para realizar tareas personalizadas.
+                    <output>—Este elemento representa un resultado producido por el formulario. Se implementa por medio de código JavaScript para mostrar el resultado de una operación al usuario.
+                    <meter>—Este elemento representa una medida o el valor actual de un rango mediante colores.
+                    <progress>—Este elemento representa el progreso de una operación.
+                    <datalist>—Este elemento crea un listado de valores disponibles para otros controles. Trabaja junto con el elemento <option> para definir cada valor.
+                    <label>—Este elemento crea una etiqueta para identificar un elemento de formulario.
+                            for para vincularlo a algun otro elemento
+                    <fieldset>—Este elemento agrupa otros elementos de formulario. Se usa para crear secciones dentro de formularios extensos. El elemento puede contener un elemento
+                    <legend> para definir el título de la sección.
+                        
+                    El atributo value también se puede usar para declarar el valor inicial de un elemento
+                    El atributo for conecta el elemento <label> con el elemento de formulario por medio del valor del atributo id
+                    El elemento <button> crea un botón estándar con las mismas características que el botón creado por el elemento <input>. La diferencia
+                        es que el título de estos botones se define entre las etiquetas de apertura y cierre, lo cual nos permite usar otros elementos HTML e incluso imágenes
+                        para declararlo. Por esta razón, el elemento <button> es el que se prefiere cuando queremos personalizarlo usando estilos CSS o cuando queremos
+                        usarlo para ejecutar códigos JavaScript.
+                    
+                    HTML define atributos globales que son exclusivos de elementos de formulario
+                    disabled—Este es un atributo booleano que desactiva el elemento. Cuando el atributo
+                        está presente, el usuario no puede introducir valores o interactuar con el elemento.
+                    readonly—Este atributo indica que el valor del elemento no se puede modificar.
+                    placeholder—Este atributo muestra un texto en el fondo del elemento que indica al usuario el valor que debe introducir.
+                    autocomplete—Este atributo activa o desactiva la función de autocompletar. Los valores disponibles son on y off.
+                    novalidate—Este es un atributo booleano para el elemento <form> que indica que el formulario no debería ser validado.
+                    formnovalidate—Este es un atributo booleano para los elementos <button> e <input> de tipo submit e image que indica que el formulario al que pertenecen no debería ser validado.
+                    required—Este es un atributo booleano que indica al navegador que el usuario debe seleccionar o insertar un valor en el elemento para validar el formulario.
+                    multiple—Este es un atributo booleano que indica al navegador que se pueden insertar múltiples valores en el campo (se aplica a elementos <input> de tipo email y file).
+                    autofocus—Este atributo booleano solicita al navegador que mueva el foco al elementotan pronto como se carga el documento.
+                    pattern—Este atributo define una expresión regular que el navegador debe usar para validar el valor insertado en el campo.
+                    form—Este atributo asocia el elemento con un formulario. Se usa para conectar un elemento con un formulario cuando el elemento no se define entre las etiquetas <form>. El valor
+                        asignado a este atributo debe ser el mismo asignado al atributo id del elemento <form>.
+                    spellcheck—Este atributo solicita al navegador que compruebe la ortografía y gramática del valor introducido en el campo. Los valores disponibles son true (verdadero) y false (falso)
+                    
+                -->
+
+        <section>
+            <form name="formulario" method="get" action="procesar.php">
+                <p>
+                    <label for="nombre">Nombre: </label>
+                    <input type="text" name="nombre" id="nombre" maxlength="15"></label>
+                </p>
+                <p>
+                    <label for="edad">Edad: </label>
+                    <input type="number" name="edad" id="edad" min="13" max="100"></label>
+                </p>
+                <p><label for="">Numero de hijos: </label> <input type="range" name="hijos" min="13" max="100" value="35"></p>
+
+                <p><label for="numero-consultas">Veces que ha consultado esta pagina: </label></p>
+                <p><label><input type="radio" name="numero-consultas" value="1" checked>1</label></p>
+                <p><label><input type="radio" name="numero-consultas" value="2">2</label></p>
+                <p><label><input type="radio" name="numero-consultas" value="3">3</label></p>
+                <p><label><input type="radio" name="numero-consultas" value="4">mas de 3</label></p>
+
+                <p>Por que consulta esta pagina</p>
+                <p><label><input type="checkbox" name="razon-consulta" value="1" > Primera vez que entro</label></p>
+                <p><label><input type="checkbox" name="razon-consulta" value="2" checked> Es interesante</label></p>
+                <p><label><input type="checkbox" name="razon-consulta" value="3"> Publica noticias interesantes</label></p>
+                <p><label><input type="checkbox" name="razon-consulta" value="4" checked> Esta bien decorada</label></p>
+
+                <p><label for="">Ultima visita</label><input type="date" name="fecha" value="2017-02-05"></p>
+
+                <p><label for="">Color preferido: </label><input type="color" name="micolor" value="#99BB00"></p>
+
+                <p><label for="">Describa brevemente la experiencia en nuestra pagina: </label> <textarea name="texto" cols="50" rows="6">Escriba algo aqui</textarea></p>
+
+                <p>
+                    <label for="listado">Libros: </label>
+                    <select name="libro" id="listado">
+                        <option value="1">IT</option>
+                        <option value="2">Carrie</option>
+                        <option value="3">El Resplandor</option>
+                        <option value="4">Misery</option>
+                    </select>
+                </p>
+
+                <p><label>Correo: <input type="email" name="correo"></label></p>
+                <p><label>Teléfono: <input type="tel" name="telefono"></label></p>
+                <p><label>Sitio Web: <input type="url" name="sitioweb"></label></p>
+
+                <datalist id="datos">
+                    <option value="123123123" label="Teléfono 1">
+                    <option value="456456456" label="Teléfono 2">
+                </datalist>
+                <p><label>Teléfono data list: <input type="tel" name="telefono" list="datos"></label></p>
+
+                <progress value="80" max="100">70%</progress>
+                <meter value="80" min="0" max="100" low="40" high="80" optimum="100">80</meter>
+
+                <!--HTML define atributos globales que son exclusivos de elementos de formulario-->
+                <p><label>Edad: <input type="text" name="edad" disabled></label></p>
+                <p><label>Buscar: <input type="search" name="buscar" placeholder="Término a buscar"></label></p>
+                <input type="submit" value="Grabar" formnovalidate>
+                <p><label>Correo: <input type="email" name="correo" required></label></p>
+                <p><label>Código Postal: <input pattern="[0-9]{5}" name="cp" required title="Inserte su código postal"></label></p>
+                <p><label>Correo: <input type="email" name="correo" multiple></label></p>
+                <p><label>Buscar: <input type="search" name="buscar" autocomplete="off"></label></p>
+                <p><label>Edad: <input type="text" name="edad" autofocus></label></p>
+                <p><label>Texto: <textarea name="texto" cols="50" rows="6" spellcheck="false"></textarea></label></p>
+
+                <p><input type="submit" value="Enviar"></p>
+                <p><input type="image" src="botonenviar.png" width="100"></p>
+                <p><button type="submit">Enviar Formulario</button></p>
+                
+            </form>
+        </section>
+
+
     </body>
+    <footer>
+        <address>Toronto, Canada</address>
+        <small>&copy; 2016 <a href="http://www.jdgauchat.com">J.D Gauchat</a></small>
+    </footer>
+
 </html>
